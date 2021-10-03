@@ -1,17 +1,5 @@
 # Bookmark-Visitor Changelog
 
-## Version 0.9.3 (2021-10-02)
-
-- Add version number to released packages
-
-Issues:
-
-- missing slovak and spanish translations
-
-## Version 0.9.2 (2021-10-01)
+## Version 0.9.0 (2021-10-04)
 
 Initial release.
-
-Issues:
-
-- missing slovak and spanish translations
