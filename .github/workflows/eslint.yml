@@ -1,0 +1,44 @@
+# SPDX-License-Identifier: GPL-3.0-only
+# Copyright (C) 2021 Roland Csaszar
+#
+# Project:  notoy-browser_extensions
+# File:     eslint.yml
+# Date:     01.Oct.2021
+###############################################################################
+
+name: ESLint
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install -g eslint
+    - run: eslint --version
+    - run: eslint */*.js -o ./eslint.txt
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      if: ${{ always() }}
+      with:
+        name: "ESLint report"
+        if-no-files-found: ignore
+        path: eslint.txt

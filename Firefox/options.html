@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="options.css" />
+    </head>
+
+    <body>
+        <h1 id="header">
+            <img src="./images/icon.svg" height="48" />
+            <span data-locale="notoySettings">Notoy Settings</span>
+        </h1>
+        <div id="format">
+            <fieldset id="formatParent">
+                <legend data-locale="fileFormat">Note file format</legend>
+
+                <label for="markdown">
+                    <input
+                        type="radio"
+                        id="markdown"
+                        name="formatRadio"
+                        value="markdown"
+                        checked />
+                    Markdown (Obsidian, Joplin, Zettlr)
+                </label>
+                <label for="orgMode">
+                    <input
+                        type="radio"
+                        id="orgMode"
+                        name="formatRadio"
+                        value="orgMode" />
+                    Org-Mode (Emacs)
+                </label>
+                <label for="text">
+                    <input
+                        type="radio"
+                        id="text"
+                        name="formatRadio"
+                        value="text" />
+                    Plain Text
+                </label>
+            </fieldset>
+        </div>
+
+        <div id="timestamp">
+            <hr />
+            <label for="timestampInput">
+                <span data-locale="addCurrentDate">
+                    Add the current date to the note?
+                </span>
+                <input type="checkbox" id="timestampInput" checked />
+            </label>
+        </div>
+
+        <div id="yaml">
+            <hr />
+            <label for="yamlFrontMatter">
+                <span data-locale="addYAMLFrontMatter">
+                    Add YAML front matter (YAML metadata block for Pandoc)?
+                </span>
+                <input type="checkbox" id="yamlFrontMatter" />
+            </label>
+        </div>
+        <!-- Use Markdown or Wiki-style link for URL? -->
+        <div>
+            <hr />
+            <span data-locale="example">Example:</span>
+            <div id="preview">
+                <p># Release-Candidate/Notoy-BrowserExtensions</p>
+                <p>2021-09-26</p>
+                <p>Keywords: #notoy, browser extension</p>
+                <p>
+                    Browser extensions to save the current pages URL with
+                    comments to a Markdown, Org-Mode or plain text file and/or
+                    communicate with the Notoy note app -
+                    Release-Candidate/Notoy-BrowserExtensions: Browser
+                    extensions to save the current pages URL with comments to a
+                    Markdown, Org-Mode or plain text file and/or communicate
+                    with the Notoy note app
+                    <br />
+                    [https://github.com/Release-Candidate/Notoy-BrowserExtensions](https://github.com/Release-Candidate/Notoy-BrowserExtensions)
+                </p>
+                <p>
+                    This is the long text for the example.
+                    <br />
+                    I don't have much to say.
+                </p>
+            </div>
+        </div>
+    </body>
+    <script src="./formatContent.js"></script>
+    <script src="options.js"></script>
+</html>

@@ -1,0 +1,74 @@
+html {
+    width: 485px; /* ??? */
+    height: 600px;
+    margin: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding: 0px;
+    font-size: medium;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0.5em 0.5em;
+}
+
+body > *,
+body > *::before,
+body > *::after,
+input {
+    margin: 0px;
+}
+
+/* Input field width is not set by flexbox' `stretch` */
+input {
+    width: 100%;
+}
+
+div {
+    flex: 0 1 auto;
+}
+
+h3 {
+    text-align: start;
+    margin-top: 0.5em;
+}
+
+h3 > img {
+    vertical-align: middle;
+}
+
+textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+#text {
+    height: 100%;
+
+    flex: 1 1 auto;
+}
+
+#text textarea {
+    height: calc(100% - 2em);
+}
+
+#save {
+    margin-bottom: 1em;
+}

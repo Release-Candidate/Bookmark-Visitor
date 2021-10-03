@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="./popup.css" />
+    </head>
+
+    <body>
+        <h3 id="header">
+            <img src="./images/icon.svg" height="24" />
+            <span data-locale="saveWebsite">Save link to this website</span>
+        </h3>
+        <div id="title">
+            <label for="titleText">
+                <span data-locale="title">Title:</span>
+                <br />
+                <input type="text" min="50" id="titleText" />
+            </label>
+        </div>
+        <div id="url">
+            <label for="pageURL">
+                <span data-locale="url">URL:</span>
+                <br />
+                <input type="url" min="50" id="pageURL" />
+            </label>
+        </div>
+        <div id="keywords">
+            <label for="keyWords">
+                <span data-locale="keywordsCommaSep">
+                    Keywords (comma separated):
+                </span>
+                <br />
+                <input
+                    type="text"
+                    min="50"
+                    id="keyWords"
+                    placeholder="keyword1, key word 2, keyword3, .." />
+            </label>
+        </div>
+        <div id="description">
+            <label for="descriptionText">
+                <span data-locale="shortDescription">Short description:</span>
+                <br />
+                <textarea rows="5" cols="60" id="descriptionText"></textarea>
+            </label>
+        </div>
+        <div id="text">
+            <label for="longText">
+                <span data-locale="longDescription">Long text:</span>
+                <br />
+                <textarea rows="5" cols="60" id="longText"></textarea>
+            </label>
+        </div>
+        <div id="save">
+            <button id="saveButton" data-locale="saveButton">Save</button>
+        </div>
+    </body>
+    <script src="./formatContent.js"></script>
+    <script src="./popup.js"></script>
+</html>

@@ -1,0 +1,9 @@
+Pipfile.lock
+/node_modules
+/notoy-*.zip
+/Chrome/_locales
+/Chrome/images
+/Edge/_locales
+/Edge/images
+/Firefox/_locales
+/Firefox/images

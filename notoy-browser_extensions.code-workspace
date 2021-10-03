@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "cSpell.words": [
+            "Notoy",
+            "orgify",
+            "tagify",
+            "tagized"
+        ],
+        "prettier.configPath": ".prettierrc.json"
+    }
+}
