@@ -2,13 +2,13 @@
 
 Any help is welcome!
 
-If you encounter a problem using one of Notoy's browser extensions, a task it not as easy as you'd like it to be or you'd like something added to it: open an issue at GitHub, see section [Report Issues](#report-issues-bugs-and-feature-requests).
+If you encounter a problem using one of Bookmark-Visitor's browser extensions, a task it not as easy as you'd like it to be or you'd like something added to it: open an issue at GitHub, see section [Report Issues](#report-issues-bugs-and-feature-requests).
 
 - [Contributing](#contributing)
   - [Report Issues (Bugs and Feature Requests)](#report-issues-bugs-and-feature-requests)
   - [Forking the Repository](#forking-the-repository)
     - [Github Documentation on Collaborating with Issues and Pull Requests](#github-documentation-on-collaborating-with-issues-and-pull-requests)
-  - [Developing Notoy](#developing-notoy)
+  - [Developing Bookmark-Visitor](#developing-bookmark-visitor)
     - [Changing and Generating Documentation](#changing-and-generating-documentation)
       - [Installing Dependencies](#installing-dependencies)
       - [MkDocs Files](#mkdocs-files)
@@ -27,15 +27,15 @@ If you encounter a problem using one of Notoy's browser extensions, a task it no
 
 ## Report Issues (Bugs and Feature Requests)
 
-Please help making Notoy better by filing bug reports and feature requests.
+Please help making Bookmark-Visitor better by filing bug reports and feature requests.
 
-File a bug report at [GitHub bur report](https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues/new?assignees=&labels=&template=bug_report.md&title=)).
-Add a feature request at [GitHub feature request](https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues/new?assignees=&labels=&template=feature_request.md&title=).
-Take a look at the [Issue Tracker at GitHub](https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues)
+File a bug report at [GitHub bur report](https://github.com/Release-Candidate/Bookmark-Visitor/issues/new?assignees=&labels=&template=bug_report.md&title=)).
+Add a feature request at [GitHub feature request](https://github.com/Release-Candidate/Bookmark-Visitor/issues/new?assignees=&labels=&template=feature_request.md&title=).
+Take a look at the [Issue Tracker at GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/issues)
 
 ## Forking the Repository
 
-If you'd like to contribute directly, e.g. better the documentation, add another language or write some source code: fork Notoy by clicking the `Fork` button in the upper right corner of the GitHub project website. Check out your fork of Notoy using the URL from the `Code` button of your fork on Github. The URL should be something like github.com/YOUR_USERNAME/Notoy.git.
+If you'd like to contribute directly, e.g. better the documentation, add another language or write some source code: fork Bookmark-Visitor by clicking the `Fork` button in the upper right corner of the GitHub project website. Check out your fork of Bookmark-Visitor using the URL from the `Code` button of your fork on Github. The URL should be something like github.com/YOUR_USERNAME/Bookmark-Visitor.git.
 
 Details about how to fork a repository on Github are [here](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
 
@@ -47,7 +47,7 @@ See [GitHub on Pull-Requests](https://docs.github.com/en/github/collaborating-wi
 
 See GitHub's documentation about how to contribute for details: [Collaborating with issues and pull requests](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests).
 
-## Developing Notoy
+## Developing Bookmark-Visitor
 
 ### Changing and Generating Documentation
 
@@ -61,7 +61,7 @@ See
 - [Using Python on a Macintosh](https://docs.python.org/3/using/mac.html)
 - [Using Python on Unix Platforms](https://docs.python.org/3/using/unix.html)
 
-In the file [`Pipfile`](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/Pipfile) there is a stanza saying
+In the file [`Pipfile`](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/Pipfile) there is a stanza saying
 
 ```ini
 [requires]
@@ -90,7 +90,7 @@ Call
 pipenv run mkdocs serve
 ```
 
-in the root directory of Notoy and connect to the running webserver at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+in the root directory of Bookmark-Visitor and connect to the running webserver at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 This preview shows changes in realtime, so any changes to the markdown files in `docs` you see as preview as soon as you save the file. The generated HTML files are saved in the directory `sites`.
 
 #### MkDocs Files
@@ -101,10 +101,10 @@ This preview shows changes in realtime, so any changes to the markdown files in 
   nav:
   - Home: index.md
   - Project Links:
-      - "Downloads": https://github.com/Release-Candidate/Notoy-BrowserExtensions/releases/latest
-      - "GitHub Project Page": "https://github.com/Release-Candidate/Notoy-BrowserExtensions"
-      - "Report a Bug or a Feature Request": "https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues/new/choose"
-      - "Issue Tracker at GitHub": "https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues"
+      - "Downloads": https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest
+      - "GitHub Project Page": "https://github.com/Release-Candidate/Bookmark-Visitor"
+      - "Report a Bug or a Feature Request": "https://github.com/Release-Candidate/Bookmark-Visitor/issues/new/choose"
+      - "Issue Tracker at GitHub": "https://github.com/Release-Candidate/Bookmark-Visitor/issues"
   - "Installation & Usage":
       - "Installation & Usage": usage.md
       - "License": license.md
@@ -126,7 +126,7 @@ Read the Docs automatically generates the MkDocs documentation after each `git p
 
 #### GitHub Documentation
 
-The Markdown documentation for GitHub are the files [README.md](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/README.md) and [CHANGELOG.md](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/CHANGELOG.md) in the project root directory.
+The Markdown documentation for GitHub are the files [README.md](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/README.md) and [CHANGELOG.md](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/CHANGELOG.md) in the project root directory.
 
 ### Source Code
 
@@ -134,7 +134,7 @@ Before you can use the configured Tools of this project, you have to download an
 
 #### NPM and Gulp
 
-Notoy uses NPM and Gulp to build the packages.
+Bookmark-Visitor uses NPM and Gulp to build the packages.
 
 To install NPM, download and install Node.js for your OS: [Node.js Website](https://nodejs.org/)
 
@@ -156,7 +156,7 @@ Now you can use the following NPM scripts:
 
 To generate the documentation using MkDocs (see [Changing and Generating Documentation](#changing-and-generating-documentation)), a virtual Python environment is needed. So, first you need to install Python, if you don't have it installed already - either from your distributions repository, using the XCode or [Homebrew](https://brew.sh/) version, or getting it from [Python.org](https://www.python.org/downloads/).
 
-In the file [`Pipfile`](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/Pipfile) there is a stanza saying
+In the file [`Pipfile`](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/Pipfile) there is a stanza saying
 
 ```ini
 [requires]
@@ -194,9 +194,9 @@ These are the GitHub workflows defined in the directory `.github/workflows`
 
 - `create_packages.yml` zips the sources for the browser extensions and
   generates a new GitHUb release with these files appended. Runs automatically after tagging
-  the source with a release tag of the form `v?.?.?`. Appends the newest entry in [CHANGELOG.md](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/CHANGELOG.md) to the release - script [`scripts/get_changelog.sh`][(https://github.com/Release-Candidate/Notoy/blob/main/scripts/get_changelog.sh](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/scripts/get_changelog.sh))
-  See the [latest release on GitHub](https://github.com/Release-Candidate/Notoy-BrowserExtensions/releases/tag/v0.9.3) as an example
-- `eslint.yml` runs `eslint`, the javascript linter using the configuration in [.eslintrc.json](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/.eslintrc.json) on all javascript source files.
+  the source with a release tag of the form `v?.?.?`. Appends the newest entry in [CHANGELOG.md](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/CHANGELOG.md) to the release - script [`scripts/get_changelog.sh`][(https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/scripts/get_changelog.sh](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/scripts/get_changelog.sh))
+  See the [latest release on GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/releases/tag/v0.9.3) as an example
+- `eslint.yml` runs `eslint`, the javascript linter using the configuration in [.eslintrc.json](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/.eslintrc.json) on all javascript source files.
 
 ## GitHub Issue Templates
 
@@ -213,10 +213,10 @@ A list of all files in this repository and what they do or configure.
 - `./LICENSE` - The project'S license, GPLv3.
 - `./CHANGELOG.md` - The project's changelog.
 - `./.prettierrc.json` - Configuration file for Prettier, a source code formatter.
-- `./package.json`, `package-lock.json` - List of NPM packages (and Gulp plugins) needed by Notoy
+- `./package.json`, `package-lock.json` - List of NPM packages (and Gulp plugins) needed by Bookmark-Visitor
 - `./gulpfile.js` - Gulp configuration script
 - `/.eslintrc.json` - ESLint configuration
-- `./notoy-browser_extensions.code-workspace` - The Visual Studio Code workspace file.
+- `./bookmark-visitor.code-workspace` - The Visual Studio Code workspace file.
 - `./.vscode/` - Directory containing additional Visual Studio Code configuration.
 
 ### GitHub Workflows & Issue Templates
@@ -230,9 +230,9 @@ Directory `./.github/workflows/`:
 
 - `create_packages.yml` zips the sources for the browser extensions and
   generates a new GitHUb release with these files appended. Runs automatically after tagging
-  the source with a release tag of the form `v?.?.?`. Appends the newest entry in [CHANGELOG.md](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/CHANGELOG.md) to the release - script [`scripts/get_changelog.sh`][(https://github.com/Release-Candidate/Notoy/blob/main/scripts/get_changelog.sh](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/scripts/get_changelog.sh))
-  See the [latest release on GitHub](https://github.com/Release-Candidate/Notoy-BrowserExtensions/releases/tag/v0.9.3) as an example
-- `eslint.yml` runs `eslint`, the javascript linter using the configuration in [.eslintrc.json](https://github.com/Release-Candidate/Notoy-BrowserExtensions/blob/main/.eslintrc.json) on all javascript source files.
+  the source with a release tag of the form `v?.?.?`. Appends the newest entry in [CHANGELOG.md](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/CHANGELOG.md) to the release - script [`scripts/get_changelog.sh`][(https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/scripts/get_changelog.sh](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/scripts/get_changelog.sh))
+  See the [latest release on GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/releases/tag/v0.9.3) as an example
+- `eslint.yml` runs `eslint`, the javascript linter using the configuration in [.eslintrc.json](https://github.com/Release-Candidate/Bookmark-Visitor/blob/main/.eslintrc.json) on all javascript source files.
 
 ### MkDocs documentation
 
@@ -243,10 +243,10 @@ Directory `./.github/workflows/`:
 nav:
   - Home: index.md
   - Project Links:
-      - "Downloads": https://github.com/Release-Candidate/Notoy-BrowserExtensions/releases/latest
-      - "GitHub Project Page": "https://github.com/Release-Candidate/Notoy-BrowserExtensions"
-      - "Report a Bug or a Feature Request": "https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues/new/choose"
-      - "Issue Tracker at GitHub": "https://github.com/Release-Candidate/Notoy-BrowserExtensions/issues"
+      - "Downloads": https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest
+      - "GitHub Project Page": "https://github.com/Release-Candidate/Bookmark-Visitor"
+      - "Report a Bug or a Feature Request": "https://github.com/Release-Candidate/Bookmark-Visitor/issues/new/choose"
+      - "Issue Tracker at GitHub": "https://github.com/Release-Candidate/Bookmark-Visitor/issues"
   - "Installation & Usage":
       - "Installation & Usage": usage.md
       - "License": license.md
@@ -262,7 +262,7 @@ Directory `./docs`:
 - `./docs/index.md` - The documentation's home page.
 - `./docs/usage.md` - Usage information.
 - `./docs/contributing.md` - Information on how to contribute to the project.
-- `./docs/license.md` - The license of the Notoy browser extensions, GPLv3
+- `./docs/license.md` - The license of the Bookmark-Visitor, GPLv3
 
 Directory `./run_haddock.bat`. Sadly I haven't found a way to generate that documentation using `mkdocs build`, which is what Read the Docs calls to build it. So for now it is included in the source repository (but not the Stack template file).
 
@@ -280,7 +280,7 @@ A translation file in JSON format looks like this:
 ```json
 {
   "extensionName": {
-    "message": "Notoy",
+    "message": "Bookmark-Visitor",
     "description": "Name of the extension."
   },
   "extensionDescription": {

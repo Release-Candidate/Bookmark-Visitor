@@ -1,4 +1,4 @@
-# Notoy Browser Extensions Changelog
+# Bookmark-Visitor Changelog
 
 ## Version 0.9.3 (2021-10-02)
 

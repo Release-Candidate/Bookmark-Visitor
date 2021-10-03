@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: GPL-3.0-only
 # Copyright (C) 2021 Roland Csaszar
 #
-# Project:  notoy-browser_extensions
+# Project:  bookmark-visitor
 # File:     create_packages.yml
 # Date:     01.Oct.2021
 ###############################################################################
@@ -44,7 +44,7 @@ jobs:
           npm install --dev
           npm run pack
           cd $GITHUB_WORKSPACE/${{ matrix.browser }}
-          zip -r -v notoy-${{ matrix.browser }}-${{ env.GIT_TAG_NAME }}.zip *
+          zip -r -v bookmark-visitor-${{ matrix.browser }}-${{ env.GIT_TAG_NAME }}.zip *
 
       - name: Generate Changelog
         run: |
@@ -57,7 +57,7 @@ jobs:
         with:
           name: Version ${{ env.GIT_TAG_NAME }}
           body_path: first_changelog.md
-          files: ./${{ matrix.browser }}/notoy-${{ matrix.browser }}-${{ env.GIT_TAG_NAME }}.zip
+          files: ./${{ matrix.browser }}/bookmark-visitor-${{ matrix.browser }}-${{ env.GIT_TAG_NAME }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

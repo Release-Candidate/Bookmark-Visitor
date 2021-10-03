@@ -4,7 +4,7 @@
 
 ## Manually Install Extensions
 
-1. Download the latest release for your browser from GitHub [latest release at GitHub](https://github.com/Release-Candidate/Notoy-BrowserExtensions/releases/latest)
+1. Download the latest release for your browser from GitHub [latest release at GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest)
 2. Follow the instructions to install the extension for your browser:
     - Chrome:
         1. unzip the downloaded file to a directory

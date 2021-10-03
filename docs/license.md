@@ -1,6 +1,6 @@
 # License
 
-The Notoy browser extensions are licensed under the GPLv3.
+The Bookmark-Visitor browser extensions are licensed under the GPLv3.
 
 ```text
                     GNU GENERAL PUBLIC LICENSE

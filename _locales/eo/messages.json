@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Notoy",
+    "message": "Bookmark-Visitor",
     "description": "Name der Extension."
   },
   "extensionDescription": {
@@ -23,8 +23,8 @@
     "message": "Etikedoj:",
     "description": "Die Mehrzahl des Wortes 'Schlagwort' als Überschrift einer Liste von Schlagworten."
   },
-  "notoySettings": {
-    "message": "Preferoj de Notoy",
+  "bookmark-visitorSettings": {
+    "message": "Preferoj de Bookmark-Visitor",
     "description": "Überschrift der Seite 'Optionen'."
   },
   "fileFormat": {

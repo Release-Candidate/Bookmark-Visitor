@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-only
 // Copyright (C) 2021 Roland Csaszar
 //
-// Project:  notoy-browser_extensions
+// Project:  bookmark-visitor
 // File:     gulpfile.js
 // Date:     03.Oct.2021
 //
@@ -90,7 +90,7 @@ function copyTranslations() {
 
 function zipDir(dirName) {
     return src("./" + dirName + "/**/*")
-        .pipe(zip("notoy-" + dirName + ".zip"))
+        .pipe(zip("bookmark-visitor-" + dirName + ".zip"))
         .pipe(dest("./"))
 }
 
@@ -128,21 +128,21 @@ function delFirefoxDir(dirName, cb) {
 function cleanChrome(cb) {
     delChromeDir("images", cb)
     delChromeDir("_locales", cb)
-    del(["notoy-Chrome.zip"], cb)
+    del(["bookmark-visitor-Chrome.zip"], cb)
     cb()
 }
 
 function cleanEdge(cb) {
     delEdgeDir("images", cb)
     delEdgeDir("_locales", cb)
-    del(["notoy-Edge.zip"], cb)
+    del(["bookmark-visitor-Edge.zip"], cb)
     cb()
 }
 
 function cleanFirefox(cb) {
     delFirefoxDir("images", cb)
     delFirefoxDir("_locales", cb)
-    del(["notoy-Firefox.zip"], cb)
+    del(["bookmark-visitor-Firefox.zip"], cb)
     cb()
 }
 

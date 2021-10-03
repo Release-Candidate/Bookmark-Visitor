@@ -1,6 +1,6 @@
 {
   "extensionName": {
-    "message": "Notoy",
+    "message": "Bookmark-Visitor",
     "description": "Name of the extension."
   },
   "extensionDescription": {
@@ -23,8 +23,8 @@
     "message": "Keywords:",
     "description": "The plural word 'keywords' as a label for a list of keywords."
   },
-  "notoySettings": {
-    "message": "Notoy Settings",
+  "bookmark-visitorSettings": {
+    "message": "Bookmark-Visitor Settings",
     "description": "Title of the option page"
   },
   "fileFormat": {

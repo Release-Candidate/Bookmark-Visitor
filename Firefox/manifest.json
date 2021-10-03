@@ -7,7 +7,7 @@
     "default_locale": "en",
     "browser_specific_settings": {
         "gecko": {
-            "id": "Notoy@Release-Candidate.com"
+            "id": "Bookmark-Visitor@Release-Candidate.com"
         }
     },
     "background": {
