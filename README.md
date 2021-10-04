@@ -17,7 +17,7 @@ Supported browsers in alphabetical order:
 - [License](#license)
 
 [![ESLint](https://github.com/Release-Candidate/Bookmark-Visitor/actions/workflows/eslint.yml/badge.svg)](https://github.com/Release-Candidate/Bookmark-Visitor/actions/workflows/eslint.yml)
-[![Documentation Status](https://readthedocs.org/projects/Bookmark-Visitor/badge/?version=latest)](https://Bookmark-Visitor.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/bookmark-visitor/badge/?version=latest)](https://bookmark-visitor.readthedocs.io/en/latest/?badge=latest)
 
 ## Usage
 
