@@ -4,7 +4,7 @@
 #
 # Project:  bookmark-visitor
 # File:     get_changelog.sh
-# Date:     01.Oct.2021
+# Date:     04.Oct.2021
 ###############################################################################
 
 # Returns the newest part of the changelog `CHANGELOG.md`.

@@ -8,16 +8,9 @@
     "background": {
         "service_worker": "background.js"
     },
-    "options_page": "options.html",
     "permissions": [
         "storage",
-        "tabs",
-        "scripting",
-        "downloads"
-    ],
-    "host_permissions": [
-        "http://*/",
-        "https://*/"
+        "bookmarks"
     ],
     "icons": {
         "16": "./images/icon_transp_16.png",

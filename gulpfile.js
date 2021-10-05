@@ -3,7 +3,7 @@
 //
 // Project:  bookmark-visitor
 // File:     gulpfile.js
-// Date:     03.Oct.2021
+// Date:     04.Oct.2021
 //
 //=============================================================================
 
@@ -68,13 +68,24 @@ function replaceVersionFirefox() {
 }
 
 //=============================================================================
-// Copy Directories
+// Copy Directories and files
+
+function copyFilesInDir(dirName) {
+    return src("./" + dirName + "/*")
+        .pipe(dest("./Chrome/"))
+        .pipe(dest("./Edge/"))
+        .pipe(dest("./Firefox/"))
+}
 
 function copyDir(dirName) {
     return src("./" + dirName + "/**/*")
         .pipe(dest("./Chrome/" + dirName))
         .pipe(dest("./Edge/" + dirName))
         .pipe(dest("./Firefox/" + dirName))
+}
+
+function copyHTML() {
+    return copyFilesInDir("./extension_html")
 }
 
 function copyImages() {
@@ -115,14 +126,17 @@ function delDirectory(dirName, cb) {
 
 function delChromeDir(dirName, cb) {
     delDirectory("./Chrome/" + dirName, cb)
+    delDirectory("./Chrome/*.html", cb)
 }
 
 function delEdgeDir(dirName, cb) {
     delDirectory("./Edge/" + dirName, cb)
+    delDirectory("./Edge/*.html", cb)
 }
 
 function delFirefoxDir(dirName, cb) {
     delDirectory("./Firefox/" + dirName, cb)
+    delDirectory("./Firefox/*.html", cb)
 }
 
 function cleanChrome(cb) {
@@ -154,6 +168,7 @@ exports.clean = parallel(cleanChrome, cleanEdge, cleanFirefox)
 // eslint-disable-next-line no-undef
 exports.default = series(
     parallel(
+        copyHTML,
         copyImages,
         copyTranslations,
         replaceVersionChrome,
