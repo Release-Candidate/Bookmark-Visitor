@@ -1,9 +1,16 @@
 Pipfile.lock
+
 /node_modules
 /bookmark-visitor-*.zip
+
 /Chrome/_locales
 /Chrome/images
+/Chrome/*.html
+
 /Edge/_locales
 /Edge/images
+/Edge/*.html
+
 /Firefox/_locales
 /Firefox/images
+/Firefox/*.html
