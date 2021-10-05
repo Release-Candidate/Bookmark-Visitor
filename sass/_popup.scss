@@ -1,14 +1,11 @@
-/* Chrome adds space for a scroll bar to the right of the popup, so don't
-use the maximum 800px! */
-html {
-    width: 740px; /* 740px + margins + scrollbar width */
-    height: 600px;
-    margin: 0px;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding: 0px;
-    box-sizing: border-box;
-}
+/* SPDX-License-Identifier: GPL-3.0-only
+ Copyright (C) 2021 Roland Csaszar
+
+ Project:  bookmark-visitor
+ File:     _popup.scss
+ Date:     05.Oct.2021
+
+=============================================================================*/
 
 *,
 *::before,

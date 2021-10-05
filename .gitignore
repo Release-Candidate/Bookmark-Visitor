@@ -6,11 +6,14 @@ Pipfile.lock
 /Chrome/_locales
 /Chrome/images
 /Chrome/*.html
+/Chrome/*.css
 
 /Edge/_locales
 /Edge/images
 /Edge/*.html
+/Edge/*.css
 
 /Firefox/_locales
 /Firefox/images
 /Firefox/*.html
+/Firefox/*.css

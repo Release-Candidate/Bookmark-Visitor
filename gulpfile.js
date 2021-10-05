@@ -23,6 +23,12 @@ const zip = require("gulp-zip")
 const replace = require("gulp-string-replace")
 
 // eslint-disable-next-line no-undef
+const sass = require("gulp-sass")(require("sass"))
+
+// eslint-disable-next-line no-undef
+const rename = require("gulp-rename")
+
+// eslint-disable-next-line no-undef
 const fs = require("fs")
 
 //=============================================================================
@@ -97,6 +103,40 @@ function copyTranslations() {
 }
 
 //=============================================================================
+// Run SASS to generate CSS
+
+function runSassOnFile(fileName, browserName) {
+    return src("./sass/" + browserName.toLowerCase() + "_" + fileName + ".scss")
+        .pipe(sass().on("error", sass.logError))
+        .pipe(rename(fileName + ".css"))
+        .pipe(dest("./" + browserName + "/"))
+}
+
+function runSassOnFileChrome(fileName) {
+    return runSassOnFile(fileName, "Chrome")
+}
+
+function runSassOnFileEdge(fileName) {
+    return runSassOnFile(fileName, "Edge")
+}
+
+function runSassOnFileFirefox(fileName) {
+    return runSassOnFile(fileName, "Firefox")
+}
+
+function runSassChromePopup() {
+    return runSassOnFileChrome("popup")
+}
+
+function runSassEdgePopup() {
+    return runSassOnFileEdge("popup")
+}
+
+function runSassFirefoxPopup() {
+    return runSassOnFileFirefox("popup")
+}
+
+//=============================================================================
 // Zip Directories
 
 function zipDir(dirName) {
@@ -127,16 +167,19 @@ function delDirectory(dirName, cb) {
 function delChromeDir(dirName, cb) {
     delDirectory("./Chrome/" + dirName, cb)
     delDirectory("./Chrome/*.html", cb)
+    delDirectory("./Chrome/*.css", cb)
 }
 
 function delEdgeDir(dirName, cb) {
     delDirectory("./Edge/" + dirName, cb)
     delDirectory("./Edge/*.html", cb)
+    delDirectory("./Edge/*.css", cb)
 }
 
 function delFirefoxDir(dirName, cb) {
     delDirectory("./Firefox/" + dirName, cb)
     delDirectory("./Firefox/*.html", cb)
+    delDirectory("./Firefox/*.css", cb)
 }
 
 function cleanChrome(cb) {
@@ -168,6 +211,9 @@ exports.clean = parallel(cleanChrome, cleanEdge, cleanFirefox)
 // eslint-disable-next-line no-undef
 exports.default = series(
     parallel(
+        runSassChromePopup,
+        runSassEdgePopup,
+        runSassFirefoxPopup,
         copyHTML,
         copyImages,
         copyTranslations,

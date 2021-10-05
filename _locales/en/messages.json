@@ -23,7 +23,7 @@
     "message": "Keywords:",
     "description": "The plural word 'keywords' as a label for a list of keywords."
   },
-  "bookmark-visitorSettings": {
+  "bookmarkVisitorSettings": {
     "message": "Bookmark-Visitor Settings",
     "description": "Title of the option page"
   },

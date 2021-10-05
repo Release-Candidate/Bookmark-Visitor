@@ -23,7 +23,7 @@
     "message": "Schlagworte:",
     "description": "Die Mehrzahl des Wortes 'Schlagwort' als Überschrift einer Liste von Schlagworten."
   },
-  "bookmark-visitorSettings": {
+  "bookmarkVisitorSettings": {
     "message": "Bookmark-Visitor Einstellungen",
     "description": "Überschrift der Seite 'Optionen'."
   },
