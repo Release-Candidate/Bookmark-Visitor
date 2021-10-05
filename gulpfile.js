@@ -105,35 +105,31 @@ function copyTranslations() {
 //=============================================================================
 // Run SASS to generate CSS
 
-function runSassOnFile(fileName, browserName) {
-    return src("./sass/" + browserName.toLowerCase() + "_" + fileName + ".scss")
+function runSassBrowser(browserName) {
+    return src("./sass/" + browserName.toLowerCase() + "_*.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(rename(fileName + ".css"))
+        .pipe(
+            rename((path) => {
+                path.basename = path.basename.replace(
+                    browserName.toLowerCase() + "_",
+                    ""
+                )
+                path.extname = ".css"
+            })
+        )
         .pipe(dest("./" + browserName + "/"))
 }
 
-function runSassOnFileChrome(fileName) {
-    return runSassOnFile(fileName, "Chrome")
+function runSassChrome() {
+    return runSassBrowser("Chrome")
 }
 
-function runSassOnFileEdge(fileName) {
-    return runSassOnFile(fileName, "Edge")
+function runSassEdge() {
+    return runSassBrowser("Edge")
 }
 
-function runSassOnFileFirefox(fileName) {
-    return runSassOnFile(fileName, "Firefox")
-}
-
-function runSassChromePopup() {
-    return runSassOnFileChrome("popup")
-}
-
-function runSassEdgePopup() {
-    return runSassOnFileEdge("popup")
-}
-
-function runSassFirefoxPopup() {
-    return runSassOnFileFirefox("popup")
+function runSassFirefox() {
+    return runSassBrowser("Firefox")
 }
 
 //=============================================================================
@@ -211,9 +207,9 @@ exports.clean = parallel(cleanChrome, cleanEdge, cleanFirefox)
 // eslint-disable-next-line no-undef
 exports.default = series(
     parallel(
-        runSassChromePopup,
-        runSassEdgePopup,
-        runSassFirefoxPopup,
+        runSassChrome,
+        runSassEdge,
+        runSassFirefox,
         copyHTML,
         copyImages,
         copyTranslations,
