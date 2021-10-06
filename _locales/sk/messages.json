@@ -4,71 +4,19 @@
     "description": "Name der Extension."
   },
   "extensionDescription": {
-    "message": "Speichert einen Link des aktuellen Tabs mit dessen Titel, Schlagworten und einer ausführlichen und einer kurzen Beschreibung als Markdown, Org-Mode oder Text Datei.",
+    "message": "Speichert Link auf das aktuelle Tab mit Titel, Schlagworten, ausführlicher und kurzer Beschreibung als Markdown, Org-Mode oder Text.",
     "description": "Beschreibung der Extension."
   },
-  "browserExtension": {
-    "message": "Rozšírenie prehliadača",
-    "description": "Übersetzung von 'browser extension'"
+  "walkBookmarks": {
+    "message": "Bookmarks eines nach dem anderen durchgehen",
+    "description": "Überschrift des Popup-Fensters"
   },
-  "previewDescription": {
-    "message": "Das ist eine kurze Beschreibung des Inhaltes, meistens von der Webseite selbst, man kann sie aber anpassen",
-    "description": "Kurze Beschreibung des Inhaltes des Beispieles auf der 'Optionen'-Seite"
+  "nextButton": {
+    "message": "Nächstes Bookmark",
+    "description": "Bezeichnung des Knopfes 'next bookmark'"
   },
-  "previewText": {
-    "message": "Das ist die ausführliche Beschreibung des Beispiels.\nHier kann geschrieben werden, was auch immer man will.",
-    "description": "Ausführliche Beschreibung des Inhaltes des Beispieles auf der 'Optionen'-Seite"
-  },
-  "keywords": {
-    "message": "Schlagworte:",
-    "description": "Die Mehrzahl des Wortes 'Schlagwort' als Überschrift einer Liste von Schlagworten."
-  },
-  "bookmarkVisitorSettings": {
-    "message": "Bookmark-Visitor možnosti",
-    "description": "Überschrift der Seite 'Optionen'."
-  },
-  "fileFormat": {
-    "message": "Format der erstellten Notiz:",
-    "description": "Bezeichnung der Auswahl des Formates der Notiz."
-  },
-  "addCurrentDate": {
-    "message": "Aktuelles Datum zur Notiz hinzufügen?",
-    "description": "Frage, ob das aktuelle Datum zur Notiz hinzugefügt werden soll."
-  },
-  "addYAMLFrontMatter": {
-    "message": "YAML Front Matter (YAML Metadata für Pandoc) hinzufügen?",
-    "description": "Frage, ob 'YAML Front Matter' zur Notiz hinzugefügt werden soll."
-  },
-  "example": {
-    "message": "Beispiel:",
-    "description": "Die Überschrift des Beispieles auf der 'Optionen'-Seite."
-  },
-  "saveWebsite": {
-    "message": "Notiz über diese Webseite speichern",
-    "description": "Überschrift des 'Popups'. Beschreibt, was diese Erweiterung macht."
-  },
-  "title": {
-    "message": "Überschrift:",
-    "description": "Bezeichnung der Überschrift der Webseite, die verwendet werden soll."
-  },
-  "url": {
-    "message": "Link:",
-    "description": "Bezeichnung der URL der Webseite."
-  },
-  "keywordsCommaSep": {
-    "message": "Schlagworte (getrennt mit Beistrichen):",
-    "description": "Bezeichnung für eine Liste von mit Beistrichen getrennten Schlagworten."
-  },
-  "shortDescription": {
-    "message": "Kurze Beschreibung:",
-    "description": "Bezeichnung für die kurze Beschreibung des Inhalts."
-  },
-  "longDescription": {
-    "message": "Ausführliche Beschreibung:",
-    "description": "Bezeichnung für die ausführliche Beschreibung des Inhalts."
-  },
-  "saveButton": {
-    "message": "Uložiť",
-    "description": "Bezeichnung des Knopfes."
+  "deleteButton": {
+    "message": "Bookmark löschen",
+    "description": "Bezeichnung des Knopfes 'delete bookmark'"
   }
 }

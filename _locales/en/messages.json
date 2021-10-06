@@ -1,74 +1,22 @@
 {
   "extensionName": {
     "message": "Bookmark-Visitor",
-    "description": "Name of the extension."
+    "description": "Name of the extension"
   },
   "extensionDescription": {
-    "message": "Saves a link to the current active tab with its title, keywords and a long and short description as markdown, Org-Mode or plain text",
-    "description": "Description of the extension."
+    "message": "Speichert Link auf das aktuelle Tab mit Titel, Schlagworten, ausführlicher und kurzer Beschreibung als Markdown, Org-Mode oder Text.",
+    "description": "Description of the extension"
   },
-  "browserExtension": {
-    "message": "browser extension",
-    "description": "Translation of 'browser extension'"
+  "walkBookmarks": {
+    "message": "Walk through all bookmarks",
+    "description": "Title of the popup window"
   },
-  "previewDescription": {
-    "message": "This is a short description of the content of the website, usually set by the website itself, but you can change that.",
-    "description": "Short description for the preview in the 'options' page"
+  "nextButton": {
+    "message": "Next bookmark",
+    "description": "Label of the button 'next bookmark'"
   },
-  "previewText": {
-    "message": "This is the long text for the example.\nYou can write whatever you want here.",
-    "description": "Long description for the preview in the 'options' page."
-  },
-  "keywords": {
-    "message": "Keywords:",
-    "description": "The plural word 'keywords' as a label for a list of keywords."
-  },
-  "bookmarkVisitorSettings": {
-    "message": "Bookmark-Visitor Settings",
-    "description": "Title of the option page"
-  },
-  "fileFormat": {
-    "message": "Note file format:",
-    "description": "Label to choose one of the supported file formats to use."
-  },
-  "addCurrentDate": {
-    "message": "Add current date to note?",
-    "description": "Question, if the current date should be added to the file."
-  },
-  "addYAMLFrontMatter": {
-    "message": "Add YAML front matter (metadata for e.g. Pandoc)?",
-    "description": "Question, if YAML front matter should be added to the file."
-  },
-  "example": {
-    "message": "Example:",
-    "description": "The label of the example."
-  },
-  "saveWebsite": {
-    "message": "Save note of this website",
-    "description": "Title of the popup. Describes what the popup does."
-  },
-  "title": {
-    "message": "Title:",
-    "description": "Label for the page's title."
-  },
-  "url": {
-    "message": "Link:",
-    "description": "Label for the page's url"
-  },
-  "keywordsCommaSep": {
-    "message": "Keywords (comma separated):",
-    "description": "Label for a list of comma separated keywords."
-  },
-  "shortDescription": {
-    "message": "Short description:",
-    "description": "Label for the short description of the page's content."
-  },
-  "longDescription": {
-    "message": "Long description:",
-    "description": "Label for the long description of the page's content."
-  },
-  "saveButton": {
-    "message": "Save",
-    "description": "Label of the button to save the information to disk."
+  "deleteButton": {
+    "message": "Delete bookmark",
+    "description": "Label of the button 'delete bookmark'"
   }
 }
