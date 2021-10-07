@@ -10,11 +10,6 @@
             "id": "Bookmark-Visitor@Release-Candidate.com"
         }
     },
-    "background": {
-        "scripts": [
-            "background.js"
-        ]
-    },
     "permissions": [
         "storage",
         "bookmarks"

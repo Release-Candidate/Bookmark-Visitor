@@ -18,5 +18,15 @@
   "deleteButton": {
     "message": "Bookmark löschen",
     "description": "Bezeichnung des Knopfes 'delete bookmark'"
+  },
+  "deleteMessage": {
+    "message": "Bookmark '$TITLE$' wirklich löschen?",
+    "description": "Fragt nach, ob man das Bookmark mit Titel 'TITEL' wirklich löschen will.",
+    "placeholders": {
+      "title": {
+        "content": "$1",
+        "example": "Wikipedia – Die freie Enzyklopädie"
+      }
+    }
   }
 }

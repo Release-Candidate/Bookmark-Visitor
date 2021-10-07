@@ -18,5 +18,15 @@
   "deleteButton": {
     "message": "Delete bookmark",
     "description": "Label of the button 'delete bookmark'"
+  },
+  "deleteMessage": {
+    "message": "Really delete  Bookmark '$TITLE$'?",
+    "description": "Asks to confirm the deletion of bookmark with title 'TITLE'.",
+    "placeholders": {
+      "title": {
+        "content": "$1",
+        "example": "Wikipedia, the free encyclopedia"
+      }
+    }
   }
 }

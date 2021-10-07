@@ -11,6 +11,7 @@
             "tagify",
             "tagized"
         ],
-        "prettier.configPath": ".prettierrc.json"
+        "prettier.configPath": ".prettierrc.json",
+        "cSpell.enabled": true
     }
 }
