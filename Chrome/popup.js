@@ -19,9 +19,9 @@ const folderSeparator = "/"
 
 let folderDiv = document.getElementById("folders")
 
-let titleDiv = document.getElementById("title")
+let titleElem = document.getElementById("title")
 
-let urlDiv = document.getElementById("url")
+let urlAnchor = document.getElementById("urlA")
 
 document.querySelectorAll("[data-locale]").forEach((elem) => {
     elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
@@ -84,7 +84,7 @@ async function mainEntry({ currentItemId }) {
     let currentItem = await getFirstBookmark(currentId)
     if (currentItem) {
         chrome.storage.local.set({ currentItemId: currentItem.id })
-        getParents(currentItem)
+        await getParents(currentItem)
     }
 }
 
@@ -103,14 +103,9 @@ async function getFirstBookmark(itemId) {
 
     for (item of items) {
         if (item.url) {
-            urlDiv.innerText = `<a href="${getURL(item)}">${getURL(item)}</a>`
-            // let anchor = document.createElement("a")
-            // anchor.href = URL.createObjectURL(getURL(item))
-
-            // anchor.textContent = getURL(item)
-            // anchor.hidden = false
-            // urlDiv.appendChild(anchor)
-            titleDiv.innerText = getTitle(item)
+            urlAnchor.href = getURL(item)
+            urlAnchor.text = getURL(item)
+            titleElem.innerText = getTitle(item)
             return item
         } else if (item.children) {
             // eslint-disable-next-line no-magic-numbers
