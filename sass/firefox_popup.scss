@@ -10,11 +10,13 @@
 
 /* Firefox uses max 500px? OR something like that ... */
 html {
-    width: 485px; /* ??? */
-    height: 600px;
     margin: 0px;
-    margin-right: 10px;
-    margin-left: 10px;
     padding: 0px;
     box-sizing: border-box;
+}
+
+body {
+    width: 800px; /* ??? */
+    height: 480px;
+    padding: 1em;
 }
