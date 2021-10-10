@@ -9,13 +9,22 @@
         <h2 id="header">
             <img src="./images/icon.svg" height="24" />
             <span data-locale="walkBookmarks">Walk through Bookmarks</span>
-        </h3>
-        <div id="folders"></div>
-        <div id="titleDiv">
-            <h3 id="title"></h2>
+        </h2>
+        <div id="dropDowns">
+            <fieldset id="foldersFieldset">
+                <legend data-locale="foldersLegend">Bookmark Folder</legend>
+                <div id="folders"></div>
+            </fieldset>
+            <fieldset id="titleFieldset">
+                <legend data-locale="titleLegend">Bookmark Title</legend>
+                <div id="titleDiv"></div>
+            </fieldset>
         </div>
-        <div id="url">
-            <a href="" id="urlA"></a>
+        <div id="content">
+            <h3 id="title">Bookmark Title</h3>
+            <div id="url">
+                <a href="" id="urlA">http://example.com</a>
+            </div>
         </div>
 
         <div id="buttons">

@@ -1,4 +1,8 @@
 {
+  "languageName": {
+    "message": "en",
+    "desription": "Language abbreviation for 'english'"
+  },
   "extensionName": {
     "message": "Bookmark-Visitor",
     "description": "Name of the extension"
@@ -11,6 +15,14 @@
     "message": "Walk through all bookmarks",
     "description": "Title of the popup window"
   },
+  "foldersLegend": {
+    "message": "Bookmark Folder",
+    "description": "Label of the bookmark folder chooser"
+  },
+  "titleLegend": {
+    "message": "Bookmark Title",
+    "description": "Label of the bookmark chooser, containing all bookmark title in the current folder"
+  },
   "nextButton": {
     "message": "Next bookmark",
     "description": "Label of the button 'next bookmark'"
@@ -20,7 +32,7 @@
     "description": "Label of the button 'delete bookmark'"
   },
   "deleteMessage": {
-    "message": "Really delete  Bookmark '$TITLE$'?",
+    "message": "Really delete Bookmark '$TITLE$'?",
     "description": "Asks to confirm the deletion of bookmark with title 'TITLE'.",
     "placeholders": {
       "title": {

@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 // SPDX-License-Identifier: GPL-3.0-only
 // Copyright (C) 2021 Roland Csaszar
 //
@@ -16,10 +17,14 @@ const idTreeRoot = "0"
 let folderDiv = document.getElementById("folders")
 
 let titleElem = document.getElementById("title")
+let titleDiv = document.getElementById("titleDiv")
 
 document.querySelectorAll("[data-locale]").forEach((elem) => {
     elem.innerText = chrome.i18n.getMessage(elem.dataset.locale)
 })
+
+const langShort = chrome.i18n.getMessage("languageName")
+document.documentElement.lang = langShort
 
 let urlAnchor = document.getElementById("urlA")
 urlAnchor.addEventListener("click", async () => {
@@ -305,10 +310,13 @@ async function getFirstBookmark(itemId) {
 }
 
 function addBookmarkTitles() {
+    while (titleDiv.firstChild) {
+        titleDiv.removeChild(titleDiv.firstChild)
+    }
     titleElem.innerText = getTitle(item)
     let titleDropdown = document.createElement("select")
     addSiblingList(item, titleDropdown)
-    titleElem.appendChild(titleDropdown)
+    titleDiv.appendChild(titleDropdown)
 }
 
 /**
@@ -321,7 +329,12 @@ function addBookmarkTitles() {
  * item doesn't have a title.
  */
 function getTitle(item) {
-    return typeof item.title === "undefined" ? "" : item.title
+    if (typeof item.title === "undefined") {
+        return ""
+    }
+    return item.title.length > 100
+        ? item.title.slice(0, 100) + " ..."
+        : item.title
 }
 
 /**

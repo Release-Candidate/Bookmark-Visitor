@@ -1,4 +1,8 @@
 {
+  "languageName": {
+    "message": "de",
+    "desription": "Sprachkürzel für 'Deutsch'"
+  },
   "extensionName": {
     "message": "Bookmark-Visitor",
     "description": "Name der Extension."
@@ -10,6 +14,14 @@
   "walkBookmarks": {
     "message": "Bookmarks eines nach dem anderen durchgehen",
     "description": "Überschrift des Popup-Fensters"
+  },
+  "foldersLegend": {
+    "message": "Bookmark-Verzeichnis",
+    "description": "Bezeichnung des Folder-Auswahl-Widgets."
+  },
+  "titleLegend": {
+    "message": "Bookmark-Titel",
+    "description": "Bezeichnung der Bookmarkauswahl, enthält alle Bookmark-Titel im aktuellen Verzeichnis."
   },
   "nextButton": {
     "message": "Nächstes Bookmark",

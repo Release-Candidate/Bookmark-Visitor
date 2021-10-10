@@ -29,11 +29,12 @@ body {
     padding: 0px;
     font-size: medium;
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
+    justify-content: space-between;
     gap: 0.5em 0.5em;
 }
 
@@ -44,59 +45,71 @@ input {
     margin: 0px;
 }
 
-/* Input field width is not set by flexbox' `stretch` */
-input {
-    width: 100%;
-}
-
 div {
     flex: 0 1 auto;
 }
 
-h3 {
+fieldset {
+    border: 0px none grey;
+}
+
+select {
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+#dropDowns,
+#foldersFieldset,
+#titleFieldset {
+    overflow-x: overlay;
+}
+
+h2 {
     text-align: start;
     margin-top: 0.5em;
 }
 
-h3 > img {
+h2 > img {
     vertical-align: middle;
 }
 
-textarea {
-    min-width: 100%;
-    max-width: 100%;
-}
-
-#text {
-    height: 100%;
-
-    flex: 1 1 auto;
-}
-
-#text textarea {
-    height: calc(100% - 2em);
-}
-
-#save {
-    margin-bottom: 1em;
+#buttons {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 button {
+    padding: 0.5em;
+    padding-inline-end: 1em;
+    padding-inline-start: 1em;
     border-radius: 5px;
-    border: 1px solid grey;
 }
 
-#saveButton:hover {
-    background-color: lawngreen;
-    border: 1px solid darkgreen;
+#nextButton {
+    background-color: chartreuse;
 }
 
-#saveButton:active {
-    background-color: darkgreen;
-    border: 1px solid black;
+#nextButton:hover {
+    background-color: greenyellow;
+}
+
+#nextButton:active {
+    background-color: darkolivegreen;
     color: white;
 }
 
-#saveButton {
-    background-color: lightgreen;
+#deleteButton {
+    background-color: red;
+}
+
+#deleteButton:hover {
+    background-color: orangered;
+}
+
+#deleteButton:active {
+    background-color: darkred;
+    color: white;
 }
