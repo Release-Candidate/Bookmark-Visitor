@@ -8,6 +8,8 @@
 //=============================================================================
 // `chrome` is unknown to eslint
 /* eslint-disable no-undef */
+// File is too long.
+/* eslint-disable max-lines */
 
 const idTreeRoot = "0"
 
@@ -68,15 +70,15 @@ async function mainEntry({ currentItemId }) {
 
     if (currentItem) {
         chrome.storage.local.set({ currentItemId: currentItem.id })
-        resetFolderButtons()
+        resetFolderDropdown()
         await getParents(currentItem)
     }
 }
 
 /**
- * Removes all parent folder buttons from the popup view.
+ * Removes all parent folder drop-downs from the popup view.
  */
-function resetFolderButtons() {
+function resetFolderDropdown() {
     while (folderDiv.firstChild) {
         folderDiv.removeChild(folderDiv.firstChild)
     }
@@ -192,8 +194,8 @@ async function getCheckedId(currentItemId) {
 }
 
 /**
- * Recursively add buttons with the parent folders of the given bookmark or
- * folder. Add clickable buttons with the parent folders to the popup window.
+ * Recursively add drop-downs with the parent folders of the given bookmark or
+ * folder to the popup view.
  *
  * @param {*} item The bookmark or folder to get the parents of.
  */
@@ -202,26 +204,77 @@ async function getParents(item) {
         return
     }
     const [parent] = await chrome.bookmarks.getSubTree(item.parentId)
-    addButton(parent)
+    addFolderDropdown(parent)
     getParents(parent)
 }
 
 /**
- * Add a button with of the folder `parent` to the popup view.
+ * Return a list of siblings of the item `item˙, includes the item `item` in
+ * the list. If `item` is a folder, only return folders, else return only
+ * bookmarks.
  *
- * @param {*} parent The folder to switch to if the button is pressed.
+ * @param {*} item The item to return the siblings of.
+ * @returns a list of siblings of the item `item˙, including `item`.
  */
-function addButton(parent) {
-    const buttonTitle = getTitle(parent)
-    if (buttonTitle !== "") {
-        let parentButton = document.createElement("Button")
-        parentButton.addEventListener("click", async () => {
-            await mainEntry({ currentItemId: parent.id })
-        })
-        parentButton.innerText = buttonTitle
-        const { firstChild } = folderDiv
-        folderDiv.insertBefore(parentButton, firstChild)
+async function getSiblings(item) {
+    if (item.id === idTreeRoot) {
+        return []
     }
+    let childArray = []
+    const [parent] = await chrome.bookmarks.getSubTree(item.parentId)
+    if (parent.children) {
+        for (child of parent.children) {
+            if (!item.url && !child.url) {
+                childArray.push(child)
+            } else if (item.url && child.url) {
+                childArray.push(child)
+            }
+        }
+    }
+    return childArray.sort((a, b) => a.id - b.id)
+}
+
+/**
+ * Add a dropdown (HTML `select`) containing a list of sibling folders of the
+ * folder `item`, including `item`.
+ *
+ * @param {*} item The folder to add the siblings of to the dropdown.
+ */
+async function addFolderDropdown(item) {
+    const currentTitle = getTitle(item)
+    if (currentTitle !== "") {
+        let folderDropdown = document.createElement("select")
+        addSiblingList(item, folderDropdown)
+        const { firstChild } = folderDiv
+        folderDiv.insertBefore(folderDropdown, firstChild)
+    }
+}
+
+/**
+ * Adds a list of siblings of the item `item` to the dropdown
+ * `itemDropdown`. If the item `item` is a folder, only add folders, if it is a
+ * bookmark, only add bookmarks.
+ *
+ * @param {*} item The item to add the siblings of and itself to the list of
+ * siblings.
+ * @param {*} itemDropdown The dropdown to add the list of items to.
+ */
+async function addSiblingList(item, itemDropdown) {
+    const siblings = await getSiblings(item)
+    for (sibling of siblings) {
+        let parentOption = document.createElement("option")
+        itemDropdown.appendChild(parentOption)
+        parentOption.innerText = getTitle(sibling)
+        parentOption.id = sibling.id
+        if (sibling.id === item.id) {
+            parentOption.selected = true
+        }
+    }
+    itemDropdown.addEventListener("change", async () => {
+        await mainEntry({
+            currentItemId: itemDropdown.options[itemDropdown.selectedIndex].id,
+        })
+    })
 }
 
 /**
@@ -240,14 +293,22 @@ async function getFirstBookmark(itemId) {
         if (item.url) {
             urlAnchor.href = getURL(item)
             urlAnchor.text = getURL(item)
-            titleElem.innerText = getTitle(item)
+            addBookmarkTitles()
             return item
-        } else if (item.children) {
+            // eslint-disable-next-line no-magic-numbers
+        } else if (item.children && item.children.length !== 0) {
             // eslint-disable-next-line no-magic-numbers
             return getFirstBookmark(item.children[0].id)
         }
     }
     return null
+}
+
+function addBookmarkTitles() {
+    titleElem.innerText = getTitle(item)
+    let titleDropdown = document.createElement("select")
+    addSiblingList(item, titleDropdown)
+    titleElem.appendChild(titleDropdown)
 }
 
 /**
