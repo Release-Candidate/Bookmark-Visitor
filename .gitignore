@@ -17,3 +17,7 @@ Pipfile.lock
 /Firefox/images
 /Firefox/*.html
 /Firefox/*.css
+
+\#*
+
+.log/
