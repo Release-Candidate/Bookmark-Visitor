@@ -1,14 +1,14 @@
 {
   "languageName": {
     "message": "de",
-    "desription": "Sprachkürzel für 'Deutsch'"
+    "description": "Sprachkürzel für 'Deutsch'"
   },
   "extensionName": {
     "message": "Bookmark-Visitor",
     "description": "Name der Extension."
   },
   "extensionDescription": {
-    "message": "Speichert Link auf das aktuelle Tab mit Titel, Schlagworten, ausführlicher und kurzer Beschreibung als Markdown, Org-Mode oder Text.",
+    "message": "Durchgehen der Bookmarks, eines nach dem anderen. Das aktuelle Bookmark kann geöffnet und gelöscht werden.",
     "description": "Beschreibung der Extension."
   },
   "walkBookmarks": {
