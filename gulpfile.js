@@ -65,10 +65,6 @@ function replaceVersionChrome() {
     return replaceVersion("Chrome", scanChangelogVersion())
 }
 
-function replaceVersionEdge() {
-    return replaceVersion("Edge", scanChangelogVersion())
-}
-
 function replaceVersionFirefox() {
     return replaceVersion("Firefox", scanChangelogVersion())
 }
@@ -79,14 +75,12 @@ function replaceVersionFirefox() {
 function copyFilesInDir(dirName) {
     return src("./" + dirName + "/*")
         .pipe(dest("./Chrome/"))
-        .pipe(dest("./Edge/"))
         .pipe(dest("./Firefox/"))
 }
 
 function copyDir(dirName) {
     return src("./" + dirName + "/**/*")
         .pipe(dest("./Chrome/" + dirName))
-        .pipe(dest("./Edge/" + dirName))
         .pipe(dest("./Firefox/" + dirName))
 }
 
@@ -124,10 +118,6 @@ function runSassChrome() {
     return runSassBrowser("Chrome")
 }
 
-function runSassEdge() {
-    return runSassBrowser("Edge")
-}
-
 function runSassFirefox() {
     return runSassBrowser("Firefox")
 }
@@ -143,10 +133,6 @@ function zipDir(dirName) {
 
 function zipChrome() {
     return zipDir("Chrome")
-}
-
-function zipEdge() {
-    return zipDir("Edge")
 }
 
 function zipFirefox() {
@@ -166,12 +152,6 @@ function delChromeDir(dirName, cb) {
     delDirectory("./Chrome/*.css", cb)
 }
 
-function delEdgeDir(dirName, cb) {
-    delDirectory("./Edge/" + dirName, cb)
-    delDirectory("./Edge/*.html", cb)
-    delDirectory("./Edge/*.css", cb)
-}
-
 function delFirefoxDir(dirName, cb) {
     delDirectory("./Firefox/" + dirName, cb)
     delDirectory("./Firefox/*.html", cb)
@@ -185,13 +165,6 @@ function cleanChrome(cb) {
     cb()
 }
 
-function cleanEdge(cb) {
-    delEdgeDir("images", cb)
-    delEdgeDir("_locales", cb)
-    del(["bookmark-visitor-Edge.zip"], cb)
-    cb()
-}
-
 function cleanFirefox(cb) {
     delFirefoxDir("images", cb)
     delFirefoxDir("_locales", cb)
@@ -202,20 +175,18 @@ function cleanFirefox(cb) {
 //=============================================================================
 
 // eslint-disable-next-line no-undef
-exports.clean = parallel(cleanChrome, cleanEdge, cleanFirefox)
+exports.clean = parallel(cleanChrome, cleanFirefox)
 
 // eslint-disable-next-line no-undef
 exports.default = series(
     parallel(
         runSassChrome,
-        runSassEdge,
         runSassFirefox,
         copyHTML,
         copyImages,
         copyTranslations,
         replaceVersionChrome,
-        replaceVersionEdge,
         replaceVersionFirefox
     ),
-    parallel(zipChrome, zipEdge, zipFirefox)
+    parallel(zipChrome, zipFirefox)
 )
