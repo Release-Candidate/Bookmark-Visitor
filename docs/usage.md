@@ -11,11 +11,6 @@
         2. go to [chrome://extensions/](chrome://extensions/)
         3. enable `Developer mode` in the upper right corner
         4. click `Load unpacked` and select the unpacked extension
-    - Edge:
-        1. unzip the downloaded file to a directory
-        2. go to [edge://extensions/](edge://extensions/)
-        3. enable `Developer mode` in the lower left corner
-        4. click `Load unpacked` and select the unpacked extension
     - Firefox:
         1. go to [about:debugging](about:debugging)
         2. click `This Firefox` to the upper left

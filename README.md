@@ -5,7 +5,6 @@ Browser extensions to save the current page's URL with comments to a markdown, o
 Supported browsers in alphabetical order:
 
 - Chrome
-- Edge
 - Firefox
 
 ## Table of Contents <!-- omit in toc -->
@@ -21,7 +20,6 @@ Supported browsers in alphabetical order:
 
 ## Usage
 
-
 ## Manually Install Extensions
 
 1. Download the latest release for your browser from GitHub [latest release at GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest)
@@ -31,11 +29,6 @@ Supported browsers in alphabetical order:
         2. go to [chrome://extensions/](chrome://extensions/)
         3. enable `Developer mode` in the upper right corner
         4. click `Load unpacked` and select the unpacked extension
-    - Edge:
-        1. unzip the downloaded file to a directory
-        1. go to [edge://extensions/](edge://extensions/)
-        1. enable `Developer mode` in the lower left corner
-        1. click `Load unpacked` and select the unpacked extension
     - Firefox:
         1. go to [about:debugging](about:debugging)
         2. click `This Firefox` to the upper left
