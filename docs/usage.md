@@ -5,6 +5,9 @@
 - Chrome: install the extension at [Bookmark-Visitor at Chrome Extensions](https://chrome.google.com/webstore/detail/bookmark-visitor/jhbibokejcdmofiiiakbobcpeefjeoeb)
 - Firefox: install the add-on at [Bookmark-Visitor at Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/bookmark-visitor/)
 
+![Screenshot of the English Version of the Chrome Extension](./images/screenshot_chrome_en.png)
+![Screenshot of the English Version of the Firefox Add-on](./images/screenshot_firefox_en.png)
+
 ## Manually Install Extensions
 
 1. Download the latest release for your browser from GitHub [latest release at GitHub](https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest)
