@@ -2,7 +2,7 @@
 
 ## Usage
 
-- Chrome: install the extension at [Bookmark-Visitor at Chrome Extensions]()
+- Chrome: install the extension at [Bookmark-Visitor at Chrome Extensions](https://chrome.google.com/webstore/detail/bookmark-visitor/jhbibokejcdmofiiiakbobcpeefjeoeb)
 - Firefox: install the add-on at [Bookmark-Visitor at Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/bookmark-visitor/)
 
 ## Manually Install Extensions

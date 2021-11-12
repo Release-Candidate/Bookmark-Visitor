@@ -19,7 +19,9 @@ site_dir: site
 nav:
     - Home: index.md
     - Project Links:
-          - "Downloads": https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest
+          - "Chrome Extension": https://chrome.google.com/webstore/detail/bookmark-visitor/jhbibokejcdmofiiiakbobcpeefjeoeb
+          - "Firefox Add-on": https://addons.mozilla.org/en-US/firefox/addon/bookmark-visitor/
+          - "Release": https://github.com/Release-Candidate/Bookmark-Visitor/releases/latest
           - "GitHub Project Page": "https://github.com/Release-Candidate/Bookmark-Visitor"
           - "Report a Bug or a Feature Request": "https://github.com/Release-Candidate/Bookmark-Visitor/issues/new/choose"
           - "Issue Tracker at GitHub": "https://github.com/Release-Candidate/Bookmark-Visitor/issues"
